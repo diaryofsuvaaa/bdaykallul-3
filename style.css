@@ -2424,3 +2424,137 @@ button:focus-visible {
     }
 
   }
+/* FAIRYTALE STORY DESIGN */
+
+.fairytale-story {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 20% 15%,
+            rgba(255,255,255,0.8),
+            transparent 30%
+        ),
+        linear-gradient(
+            145deg,
+            #f8e5ed,
+            #dce9f5,
+            #e9e4f1
+        );
+}
+
+.fairytale-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 620px;
+    padding: 35px 20px;
+}
+
+.fairytale-moon {
+    position: absolute;
+    top: 12px;
+    right: 35px;
+    color: #fff9e8;
+    font-size: 65px;
+    text-shadow: 0 0 25px white;
+}
+
+.fairytale-bear {
+    display: block;
+    width: 145px;
+    height: 145px;
+    object-fit: contain;
+    margin: 15px auto 25px;
+    filter: drop-shadow(0 8px 12px rgba(80,60,70,0.12));
+}
+
+.love-messages {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin: 15px auto 30px;
+    max-width: 470px;
+}
+
+.love-messages p {
+    color: #765b6b;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(22px, 5vw, 30px);
+    line-height: 1.55;
+    text-align: center;
+}
+
+.love-messages p:nth-child(2) {
+    color: #8b718b;
+    font-style: italic;
+}
+
+.love-messages p:nth-child(3) {
+    color: #765b6b;
+    font-size: clamp(27px, 6vw, 36px);
+}
+
+.fairytale-stars span {
+    position: absolute;
+    color: white;
+    text-shadow: 0 0 12px white;
+    animation: fairytaleTwinkle 3s infinite ease-in-out;
+}
+
+.fairytale-stars span:nth-child(1) {
+    top: 12%;
+    left: 12%;
+}
+
+.fairytale-stars span:nth-child(2) {
+    top: 30%;
+    right: 10%;
+}
+
+.fairytale-stars span:nth-child(3) {
+    top: 55%;
+    left: 7%;
+}
+
+.fairytale-stars span:nth-child(4) {
+    top: 72%;
+    right: 8%;
+}
+
+.fairytale-stars span:nth-child(5) {
+    top: 85%;
+    left: 20%;
+}
+
+.fairytale-stars span:nth-child(6) {
+    top: 18%;
+    right: 35%;
+}
+
+@keyframes fairytaleTwinkle {
+    0%, 100% {
+        opacity: 0.4;
+        transform: scale(0.85);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+@media (max-width: 600px) {
+    .fairytale-content {
+        padding: 25px 18px;
+    }
+
+    .fairytale-bear {
+        width: 125px;
+        height: 125px;
+    }
+
+    .love-messages {
+        gap: 22px;
+    }
+}

@@ -1,4 +1,4 @@
-/* =========================================
+ko/* =========================================
    KALLUL — OUR LITTLE UNIVERSE
    PART 1: FOUNDATION & SCREEN TRANSITIONS
 ========================================= */
@@ -2556,5 +2556,126 @@ button:focus-visible {
 
     .love-messages {
         gap: 22px;
+    }
+}
+/* =====================================
+   OUR LITTLE FAIRYTALE UNIVERSE
+   BABY BLUE • PINK GLOW • WARM BROWN
+===================================== */
+
+/* Overall baby-blue atmosphere */
+
+body {
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(255, 196, 220, 0.55),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 85% 75%,
+            rgba(255, 255, 255, 0.8),
+            transparent 35%
+        ),
+        linear-gradient(
+            145deg,
+            #c9e2f2,
+            #e7eafa,
+            #f7dce5,
+            #e9d9d0
+        ) !important;
+}
+
+/* Soft pink glow around the screens */
+
+.screen {
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(255, 231, 241, 0.48),
+            transparent 70%
+        ) !important;
+}
+
+/* Glassy fairytale cards */
+
+.story-card,
+.victory-card,
+.tree-progress-card,
+.letter-paper {
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    box-shadow:
+        0 10px 30px rgba(118, 86, 75, 0.09),
+        0 0 22px rgba(249, 200, 223, 0.16);
+}
+
+/* Pink glowing buttons */
+
+.primary-button {
+    background: linear-gradient(
+        135deg,
+        #806052,
+        #a47c83
+    );
+
+    box-shadow:
+        0 5px 20px rgba(249, 180, 210, 0.35);
+}
+
+/* Moon and mushroom decorations */
+
+body::before {
+    content: "☾";
+    position: fixed;
+    top: 16%;
+    right: 7%;
+    z-index: 0;
+    color: #fff9e8;
+    font-size: 65px;
+    text-shadow: 0 0 25px #ffffff;
+    opacity: 0.85;
+    pointer-events: none;
+}
+
+body::after {
+    content: "🍄";
+    position: fixed;
+    bottom: 7%;
+    left: 5%;
+    z-index: 0;
+    font-size: 34px;
+    opacity: 0.65;
+    pointer-events: none;
+}
+
+/* Warmer brown text */
+
+.eyebrow,
+.story-card h3,
+.letter-paper,
+.finale-date {
+    color: #76564b;
+}
+
+/* Gentle pink glow on stars */
+
+.floating-star {
+    color: #fff9f5;
+    text-shadow:
+        0 0 10px #ffffff,
+        0 0 20px #f6c9df;
+}
+
+/* Mobile decoration sizing */
+
+@media (max-width: 600px) {
+    body::before {
+        font-size: 48px;
+        right: 4%;
+    }
+
+    body::after {
+        font-size: 27px;
+        left: 3%;
     }
 }
